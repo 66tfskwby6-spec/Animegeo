@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anime Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Anime Hub</h1>
+      <div class="controls">
+        <input id="search" type="search" placeholder="ძებნა..." aria-label="Search anime">
+        <select id="genreFilter" aria-label="Filter by genre">
+          <option value="all">ყველა ჟანრი</option>
+        </select>
+        <select id="sortSelect" aria-label="Sort">
+          <option value="default">პოპულარობით</option>
+          <option value="title_asc">A→Z</option>
+          <option value="title_desc">Z→A</option>
+          <option value="year_desc">ახალი→ძველი</option>
+        </select>
+        <button id="showFavs" title="ფავორიტები">★</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <div id="empty" class="empty">ანიმე ვერ მოიძებნა.</div>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© Anime Hub</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
